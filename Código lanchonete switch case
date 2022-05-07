@@ -1,0 +1,70 @@
+#include <stdio.h>
+int main()
+{
+int sair,qntd,opcao;
+float conta,conta_gorj;
+sair=0;
+conta=0;
+qntd=0;
+conta_gorj=0;
+
+    while(sair==0)
+    {
+      printf("\n\t\t\t Cardápio:\n\t\t(1)Hamburguer: \t\t|R$30,00\n\t\t(2)Cheeseburguer: \t|R$35,50\n\t\t(3)Fritas: \t\t|R$20,00\n\t\t(4)Refrigerante lata: \t|R$6,50\n\t\t(5)Milkshake: \t\t|R$30,00\n\t\t(6)Cerveja lata: \t|R$8,50\t\t");
+      printf("\n\n\t\tSelecione o item desejado de acordo com seu número no menu para montar seu pedido!\n\t\tDigite 0 para apresentar a conta!\t\t");
+      scanf("%d",&opcao);
+            switch(opcao)
+        {
+               case 0: conta_gorj=(conta*1.1);
+                    printf("\n\n\t\tO pedido ficou no valor de:R$%.2f", conta);
+                    printf("\n\n\t\tCom um adicional de 10%%,o total fica :R$%.2f", conta_gorj);
+                    sair=1;
+                    break;
+                    
+                case 1: printf("\n\t\tDigite a quantidade:");
+                    scanf("%d",&qntd);
+                    printf("\n\t\tVoce adicionou: %d Hamburguer!\n", qntd);
+                    conta+=(30*qntd);  
+                    qntd=0;
+                    break;
+                    
+                case 2: printf("\n\t\tDigite a quantidade:");
+                    scanf("%d",&qntd);
+                    printf("\n\t\tVoce adicionou: %d Cheeseburguer\n", qntd);
+                    conta+=(35.50*qntd);
+                    qntd=0;
+                    break;
+                    
+                case 3: printf("\n\t\tDigite a quantidade:");
+                    scanf("%d",&qntd);
+                    printf("\n\t\tVoce adicionou: %d Fritas\n", qntd);
+                    conta+=(20.0*qntd);
+                    qntd=0;
+                    break;
+                    
+                case 4:  printf("\n\t\tDigite a quantidade:");
+                    scanf("%d",&qntd);
+                    printf("\n\t\tVoce adicionou: %d Refrigerante lata\n", qntd);
+                    conta+=(6.50*qntd);
+                    qntd=0;
+                    break;
+                    
+                case 5: printf("\n\t\tDigite a quantidade:");
+                    scanf("%d",&qntd); 
+                    printf("\n\t\tVoce adicionou: %d Milkshake\n", qntd);
+                    conta+=(30.00*qntd);
+                    qntd=0;
+                    break;
+                 
+                case 6:  printf("\n\t\tDigite a quantidade:\n");
+                    scanf("%d",&qntd);
+                    printf("\n\t\tVoce adicionou: %d Cerveja lata\n", qntd);
+                    conta+=(8.50*qntd);
+                    qntd=0;
+                    break;
+                    
+                default: printf("\n\t\t|||Digite um valor válido|||\n");
+                  break;
+        }
+    }
+    return 0; }
